@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Каталог оборудования | ООО «НФК Групп»</title>
+  <meta name="description" content="Каталог нефтегазового и бурового оборудования: буровые установки, запчасти, устьевое оборудование, системы телеметрии. Поставки по России.">
+  <meta name="keywords" content="каталог, нефтегазовое оборудование, буровое оборудование, запчасти, НФК Групп, Химки">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', 'Segoe UI', 'Roboto', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+      background-color: #ffffff;
+      color: #1e2a3a;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    .main-header {
+      background: #0a1c2a;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 12px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo-area h1 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #f4b342;
+      margin-bottom: 4px;
+    }
+
+    .logo-area p {
+      font-size: 0.7rem;
+      color: #b8d0dc;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #f0f4f8;
+      transition: 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: #f4b342;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      background: #f8fafc;
+      padding: 12px 0;
+      font-size: 0.85rem;
+      border-bottom: 1px solid #e2e9ef;
+    }
+
+    .breadcrumb a {
+      color: #2c6e8f;
+      text-decoration: none;
+    }
+
+    .breadcrumb span {
+      color: #6b7f8c;
+    }
+
+    /* Page Title */
+    .page-title {
+      padding: 40px 0 20px;
+    }
+    .page-title h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #0a2e44;
+    }
+    .page-title p {
+      color: #5a6e7c;
+      margin-top: 8px;
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      padding-bottom: 60px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 24px;
+      padding: 24px 20px;
+      flex: 1 1 280px;
+      max-width: 320px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+      transition: all 0.25s;
+      border: 1px solid #e2edf2;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .product-card img {
+      width: 100%;
+      max-height: 160px;
+      object-fit: contain;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      background: #f5f8fa;
+      padding: 8px;
+    }
+
+    .product-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: #1e4663;
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      color: #4a6272;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .product-card .btn-detail {
+      display: inline-block;
+      background: #d9782c;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: 0.2s;
+      border: none;
+      cursor: pointer;
+      align-self: center;
+    }
+
+    .product-card .btn-detail:hover {
+      background: #b95f1a;
+    }
+
+    /* Footer (exactly from user's html) */
+    footer {
+      background: #0a1f2c;
+      color: #cbdae2;
+      padding: 40px 0 20px;
+    }
+
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .footer-copy {
+      text-align: center;
+      font-size: 0.75rem;
+      padding-top: 24px;
+      border-top: 1px solid #1d4c66;
+      margin-top: 30px;
+    }
+
+    .director-sign {
+      font-style: italic;
+      margin-top: 12px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      .products-grid {
+        gap: 20px;
+      }
+      .product-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+      .page-title h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="main-header">
+  <div class="container header-flex">
+    <div class="logo-area">
+      <h1>ООО «НФК Групп»</h1>
+      <p>Нефтегазовое оборудование | Инжиниринг | Комплектация</p>
+    </div>
+    <div class="nav-links">
+      <a href="#">Главная</a>
+      <a href="#">Оборудование</a>
+      <a href="#">Услуги</a>
+      <a href="#">О компании</a>
+      <a href="#">Контакты</a>
+    </div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="#">Главная</a> / <span>Каталог оборудования</span>
+  </div>
+</div>
+
+<main>
+  <div class="page-title">
+    <div class="container">
+      <h1>Каталог нефтегазового оборудования</h1>
+      <p>Надёжные решения для бурения, ремонта и эксплуатации скважин. Прямые поставки, сертификация ТР ТС.</p>
+    </div>
+  </div>
+
+  <section class="products-section">
+    <div class="container">
+      <div class="products-grid">
+        <!-- Продукт 1: Буровые установки (изображение с zypetro) -->
+        <div class="product-card">
+          <img src="http://zypetro.com/uploads/allimg/200312/1-20031209564F27.jpg" alt="Буровые установки" onerror="this.src='https://placehold.co/300x160?text=Drilling+Rig'">
+          <h3>Буровые установки</h3>
+          <p>Мобильные и стационарные комплексы для бурения скважин любой сложности. Грузоподъёмность до 250 тонн, глубина бурения до 7000 м.</p>
+          <a href="#" class="btn-detail">Подробнее →</a>
+        </div>
+
+        <!-- Продукт 2: Оригинальные запчасти -->
+        <div class="product-card">
+          <img src="http://zypetro.com/uploads/allimg/200312/1-200312095K5128.jpg" alt="Запчасти для бурения" onerror="this.src='https://placehold.co/300x160?text=Spare+Parts'">
+          <h3>Оригинальные запчасти</h3>
+          <p>Широкий складской ассортимент: насосы, роторы, долота, гидравлика, комплектующие для буровых установок. Отгрузка 24 часа.</p>
+          <a href="#" class="btn-detail">Подробнее →</a>
+        </div>
+
+        <!-- Продукт 3: Устьевое оборудование -->
+        <div class="product-card">
+          <img src="http://zypetro.com/uploads/allimg/210514/1-210514111132.jpg" alt="Устьевое оборудование" onerror="this.src='https://placehold.co/300x160?text=Wellhead'">
+          <h3>Устьевое оборудование</h3>
+          <p>Превентеры, фонтанная арматура, крестовины, блоки дросселирования — для безопасной эксплуатации скважин под высоким давлением.</p>
+          <a href="#" class="btn-detail">Подробнее →</a>
+        </div>
+
+        <!-- Продукт 4: Системы телеметрии MWD/LWD -->
+        <div class="product-card">
+          <img src="http://zypetro.com/uploads/allimg/200312/1-200312095453423.jpg" alt="Системы телеметрии" onerror="this.src='https://placehold.co/300x160?text=MWD+LWD'">
+          <h3>MWD / LWD телеметрия</h3>
+          <p>Высокоточное оборудование для наклонно-направленного и горизонтального бурения с онлайн-контролем параметров забоя.</p>
+          <a href="#" class="btn-detail">Подробнее →</a>
+        </div>
+
+        <!-- Продукт 5: Насосно-компрессорное оборудование (добавим из другого изображения, чтобы расширить) используем ту же галерею, но можно ещё изображение с сайта zypetro, которое есть -->
+        <div class="product-card">
+          <img src="http://zypetro.com/uploads/allimg/200312/1-2003120953440-L.jpg" alt="Насосно-компрессорное оборудование" onerror="this.src='https://placehold.co/300x160?text=Pumping'">
+          <h3>Насосно-компрессорное оборудование</h3>
+          <p>Высокопроизводительные насосы, компрессоры, гидравлические станции для нефтегазовых объектов. Энергоэффективность и долговечность.</p>
+          <a href="#" class="btn-detail">Подробнее →</a>
+        </div>
+
+        <!-- Продукт 6: Противовыбросовое оборудование (превентеры) --- добавим еще для полноты -->
+        <div class="product-card">
+          <img src="http://zypetro.com/uploads/allimg/200312/1-2003120955152Y.jpg" alt="Противовыбросовое оборудование" onerror="this.src='https://placehold.co/300x160?text=BOP'">
+          <h3>Превентеры и ПВО</h3>
+          <p>Противовыбросовое оборудование (превентеры плашечные и универсальные) для обеспечения безопасности при бурении и ремонте.</p>
+          <a href="#" class="btn-detail">Подробнее →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-flex">
+    <div>
+      <h4 style="color: #f4b342;">ООО «НФК Групп»</h4>
+      <p style="font-size: 0.75rem;">Надёжный партнёр в сфере поставок нефтегазового оборудования и инжиниринга.</p>
+      <p style="font-size: 0.7rem; margin-top: 6px;">ИНН 5047269060 | ОГРН 1225000120960</p>
+    </div>
+    <div>
+      <h4 style="color: white;">Навигация</h4>
+      <p><a href="#" style="color:#b8d0dc; text-decoration:none;">Оборудование</a></p>
+      <p><a href="#" style="color:#b8d0dc; text-decoration:none;">Услуги</a></p>
+      <p><a href="#" style="color:#b8d0dc; text-decoration:none;">Реквизиты</a></p>
+    </div>
+    <div>
+      <h4 style="color: white;">Контакты</h4>
+      <p>📞 +7 (903) 786-82-92</p>
+      <p>✉️ bnl83@yandex.ru</p>
+      <p>📍 Химки, ул. Юннатов, 21</p>
+    </div>
+  </div>
+  <div class="footer-copy">
+    © 2025 ООО «НФК Групп» — Все права защищены. Информация на сайте не является публичной офертой.
+  </div>
+</footer>
+
+</body>
+</html>
