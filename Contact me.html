@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Контакты | ООО «НФК Групп» — поставка нефтегазового оборудования</title>
+  <meta name="description" content="Контакты ООО «НФК Групп»: адрес, телефон, email, реквизиты (ИНН, ОГРН). Свяжитесь с нами для поставок бурового и нефтегазового оборудования.">
+  <meta name="keywords" content="НФК Групп, контакты, нефтегазовое оборудование, буровое оборудование, ООО НФК Групп, Химки">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', 'Segoe UI', 'Roboto', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+      background-color: #ffffff;
+      color: #1e2a3a;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header - оригинальный стиль из вашего кода */
+    .main-header {
+      background: #0a1c2a;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 12px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo-area h1 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #f4b342;
+      margin-bottom: 4px;
+    }
+
+    .logo-area p {
+      font-size: 0.7rem;
+      color: #b8d0dc;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #f0f4f8;
+      transition: 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: #f4b342;
+    }
+
+    /* Контент - контактная информация (без банковских реквизитов) */
+    .contacts-page {
+      padding: 60px 0;
+      background: #f5f8fc;
+    }
+
+    .contacts-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 20px;
+    }
+
+    .contacts-info {
+      flex: 1.2;
+      background: white;
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      border: 1px solid #eef2f8;
+    }
+
+    .contacts-info h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0a2e44;
+      margin-bottom: 28px;
+      border-left: 5px solid #f4b342;
+      padding-left: 18px;
+    }
+
+    .info-block {
+      margin-bottom: 28px;
+    }
+
+    .info-block h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #1f5e8c;
+      margin-bottom: 12px;
+    }
+
+    .info-block p {
+      margin-bottom: 8px;
+      color: #2c3f4f;
+      font-size: 1rem;
+    }
+
+    .info-block a {
+      color: #1d628b;
+      text-decoration: none;
+      border-bottom: 1px solid #cbdde9;
+    }
+
+    .info-block a:hover {
+      color: #f4b342;
+      border-bottom-color: #f4b342;
+    }
+
+    .requisites-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+
+    .requisites-table td {
+      padding: 8px 0;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #eef2f8;
+    }
+
+    .requisites-table td:first-child {
+      font-weight: 700;
+      width: 140px;
+      color: #1f5e8c;
+    }
+
+    /* Форма обратной связи */
+    .contact-form {
+      flex: 1;
+      background: white;
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      border: 1px solid #eef2f8;
+    }
+
+    .contact-form h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0a2e44;
+      margin-bottom: 8px;
+    }
+
+    .contact-form .form-sub {
+      color: #5f7f9c;
+      margin-bottom: 28px;
+      font-size: 0.9rem;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #1e4663;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 16px;
+      border: 1px solid #d0dfe8;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #f4b342;
+      box-shadow: 0 0 0 3px rgba(244,179,66,0.1);
+    }
+
+    .btn-submit {
+      background: #d9782c;
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 100%;
+    }
+
+    .btn-submit:hover {
+      background: #b95f1a;
+    }
+
+    .form-note {
+      font-size: 0.7rem;
+      color: #7b98af;
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    /* Footer - оригинальный стиль из вашего кода */
+    footer {
+      background: #0a1f2c;
+      color: #cbdae2;
+      padding: 40px 0 20px;
+    }
+
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .footer-copy {
+      text-align: center;
+      font-size: 0.75rem;
+      padding-top: 24px;
+      border-top: 1px solid #1d4c66;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 800px) {
+      .contacts-wrapper {
+        flex-direction: column;
+      }
+      .header-flex {
+        flex-direction: column;
+        text-align: center;
+      }
+      .nav-links {
+        justify-content: center;
+      }
+      .contacts-info h2,
+      .contact-form h2 {
+        font-size: 1.5rem;
+      }
+      .requisites-table td:first-child {
+        width: 110px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Навигация (оригинальный header из вашего кода) -->
+<header class="main-header">
+  <div class="container header-flex">
+    <div class="logo-area">
+      <h1>ООО «НФК Групп»</h1>
+      <p>Нефтегазовое оборудование | Инжиниринг | Комплектация</p>
+    </div>
+    <div class="nav-links">
+      <a href="#">Главная</a>
+      <a href="#">Оборудование</a>
+      <a href="#">Услуги</a>
+      <a href="#">О компании</a>
+      <a href="#">Контакты</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="contacts-page">
+    <div class="container">
+      <div class="contacts-wrapper">
+        <!-- Левая колонка: контактная информация и реквизиты (без Банка и БИК) -->
+        <div class="contacts-info">
+          <h2>Контактная информация</h2>
+          
+          <div class="info-block">
+            <h3>🏢 Адрес</h3>
+            <p>141401, Московская область, г.о. Химки, г. Химки, ул. Юннатов, д. 21, корп. 2, кв. 12</p>
+          </div>
+          
+          <div class="info-block">
+            <h3>📞 Телефон</h3>
+            <p><a href="tel:+79037868292">+7 (903) 786-82-92</a></p>
+          </div>
+          
+          <div class="info-block">
+            <h3>✉️ Электронная почта</h3>
+            <p><a href="mailto:bnl83@yandex.ru">bnl83@yandex.ru</a></p>
+          </div>
+          
+          <div class="info-block">
+            <h3>⏱ Режим работы</h3>
+            <p>Пн–Пт: 9:00 – 18:00 (мск)</p>
+          </div>
+          
+          <div class="info-block">
+            <h3>Генеральный директор</h3>
+            <p>Борисова Наталья Леонидовна</p>
+          </div>
+          
+          <div class="info-block">
+            <h3>📋 Реквизиты компании</h3>
+            <table class="requisites-table">
+              <tr><td>ОГРН</td><td>1225000120960</td></tr>
+              <tr><td>ИНН / КПП</td><td>5047269060 / 504701001</td></tr>
+              <!-- Банк и БИК удалены по вашему запросу -->
+            </table>
+          </div>
+        </div>
+        
+        <!-- Правая колонка: форма обратной связи -->
+        <div class="contact-form">
+          <h2>Отправить запрос</h2>
+          <div class="form-sub">Заполните форму, и мы свяжемся с вами в ближайшее время.</div>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label>Ваше имя *</label>
+              <input type="text" placeholder="Иван Иванов" required>
+            </div>
+            <div class="form-group">
+              <label>Компания</label>
+              <input type="text" placeholder="Название организации">
+            </div>
+            <div class="form-group">
+              <label>E-mail *</label>
+              <input type="email" placeholder="info@company.ru" required>
+            </div>
+            <div class="form-group">
+              <label>Телефон</label>
+              <input type="tel" placeholder="+7 (___) ___-__-__">
+            </div>
+            <div class="form-group">
+              <label>Сообщение</label>
+              <textarea rows="5" placeholder="Опишите вашу потребность в оборудовании или услугах..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Отправить запрос</button>
+            <div class="form-note">Нажимая «Отправить», вы даёте согласие на обработку персональных данных.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Footer (оригинальный из вашего кода) -->
+<footer>
+  <div class="container footer-flex">
+    <div>
+      <h4 style="color: #f4b342;">ООО «НФК Групп»</h4>
+      <p style="font-size: 0.75rem;">Надёжный партнёр в сфере поставок нефтегазового оборудования и инжиниринга.</p>
+      <p style="font-size: 0.7rem; margin-top: 6px;">ИНН 5047269060 | ОГРН 1225000120960</p>
+    </div>
+    <div>
+      <h4 style="color: white;">Навигация</h4>
+      <p><a href="#" style="color:#b8d0dc; text-decoration:none;">Оборудование</a></p>
+      <p><a href="#" style="color:#b8d0dc; text-decoration:none;">Услуги</a></p>
+      <p><a href="#" style="color:#b8d0dc; text-decoration:none;">Реквизиты</a></p>
+    </div>
+    <div>
+      <h4 style="color: white;">Контакты</h4>
+      <p>📞 +7 (903) 786-82-92</p>
+      <p>✉️ bnl83@yandex.ru</p>
+      <p>📍 Химки, ул. Юннатов, 21</p>
+    </div>
+  </div>
+  <div class="footer-copy">
+    © 2025 ООО «НФК Групп» — Все права защищены. Информация на сайте не является публичной офертой.
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>О компании | ООО «НФК Групп»</title>
+  <meta name="description" content="ООО «НФК Групп» — российская компания, поставка бурового и нефтегазового оборудования, инжиниринговые услуги. Официальные реквизиты, контакты.">
+  <meta name="keywords" content="НФК Групп, нефтегазовое оборудование, буровое оборудование, поставки нефтяникам, ООО НФК Групп">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', 'Segoe UI', 'Roboto', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+      background-color: #ffffff;
+      color: #1e2a3a;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header (точная копия из index.html) */
+    .main-header {
+      background: #0a1c2a;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 12px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo-area h1 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #f4b342;
+      margin-bottom: 4px;
+    }
+
+    .logo-area p {
+      font-size: 0.7rem;
+      color: #b8d0dc;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #f0f4f8;
+      transition: 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: #f4b342;
+    }
+
+    /* Основной контент — только описание компании */
+    .about-section {
+      padding: 70px 0;
+    }
+
+    .company-card {
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      border: 1px solid #eef2f8;
+    }
+
+    .content {
+      padding: 48px 42px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0b2e44;
+      margin-bottom: 12px;
+    }
+
+    .subhead {
+      font-size: 1.1rem;
+      color: #2c6e9b;
+      border-left: 4px solid #f4b342;
+      padding-left: 20px;
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #144d6f;
+      margin: 32px 0 16px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e6edf4;
+    }
+
+    p {
+      margin-bottom: 18px;
+      font-size: 1rem;
+      color: #2c3f4f;
+      line-height: 1.6;
+    }
+
+    .info-grid {
+      background: #f9fbfe;
+      border-radius: 24px;
+      padding: 28px;
+      margin: 28px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      border: 1px solid #e4edf4;
+    }
+
+    .info-item {
+      break-inside: avoid;
+    }
+
+    .info-label {
+      font-weight: 700;
+      color: #1d628b;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .info-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #1d2f3e;
+    }
+
+    /* Footer (точная копия из index.html) */
+    footer {
+      background: #0a1f2c;
+      color: #cbdae2;
+      padding: 40px 0 20px;
+    }
+
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .footer-copy {
+      text-align: center;
+      font-size: 0.75rem;
+      padding-top: 24px;
+      border-top: 1px solid #1d4c66;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 800px) {
+      .content {
+        padding: 28px 20px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      .header-flex {
+        flex-direction: column;
+        text-align: center;
+      }
+      .nav-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Навигация — полностью как в index.html -->
+<header class="main-header">
+  <div class="container header-flex">
+    <div class="logo-area">
+      <h1>ООО «НФК Групп»</h1>
+      <p>Нефтегазовое оборудование | Инжиниринг | Комплектация</p>
+    </div>
+    <div class="nav-links">
+      <a href="#">Главная</a>
+      <a href="#">Оборудование</a>
+      <a href="#">Услуги</a>
+      <a href="#">О компании</a>
+      <a href="#">Контакты</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container about-section">
+    <div class="company-card">
+      <div class="content">
+        <h1>ООО «НФК Групп»</h1>
+        <div class="subhead">Надёжный партнёр в сфере поставок нефтегазового оборудования</div>
+
+        <h2>О компании</h2>
+        <p><strong>Общество с ограниченной ответственностью «НФК Групп»</strong> — российская компания, основанная в 2022 году. Мы специализируемся на комплексных поставках оборудования для нефтегазового сектора, буровых установок, запасных частей и предоставлении инжиниринговых услуг для предприятий топливно-энергетического комплекса.</p>
+        <p>Благодаря прямым контрактам с отечественными и зарубежными производителями, а также собственному складскому комплексу в Московской области (г. Химки), мы обеспечиваем быструю отгрузку и высокое качество продукции. Наши клиенты — ведущие нефтегазовые компании России, сервисные организации и подрядчики.</p>
+        <p>Ключевые принципы работы — профессионализм, надёжность, индивидуальный подход и соблюдение сроков. Мы сопровождаем сделки на всех этапах: от подбора оборудования до послегарантийного обслуживания.</p>
+
+        <h2>Реквизиты и основные сведения</h2>
+        <div class="info-grid">
+          <div class="info-item"><div class="info-label">Полное наименование</div><div class="info-value">ООО «НФК Групп»</div></div>
+          <div class="info-item"><div class="info-label">ОГРН</div><div class="info-value">1225000120960</div></div>
+          <div class="info-item"><div class="info-label">ИНН / КПП</div><div class="info-value">5047269060 / 504701001</div></div>
+          <div class="info-item"><div class="info-label">Юридический адрес</div><div class="info-value">141401, Московская обл., г. Химки, ул. Юннатов, д. 21, корп. 2, кв. 12</div></div>
+          <div class="info-item"><div class="info-label">Генеральный директор</div><div class="info-value">Борисова Наталья Леонидовна</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Footer — полностью как в index.html -->
+<footer>
+  <div class="container footer-flex">
+    <div>
+      <h4 style="color: #f4b342;">ООО «НФК Групп»</h4>
+      <p style="font-size: 0.75rem;">Надёжный партнёр в сфере поставок нефтегазового оборудования и инжиниринга.</p>
+      <p style="font-size: 0.7rem; margin-top: 6px;">ИНН 5047269060 | ОГРН 1225000120960</p>
+    </div>
+    <div>
+      <h4 style="color: white;">Навигация</h4>
+      <p><a href="#" style="color:#b8d0dc; text-decoration:none;">Оборудование</a></p>
+      <p><a href="#" style="color:#b8d0dc; text-decoration:none;">Услуги</a></p>
+      <p><a href="#" style="color:#b8d0dc; text-decoration:none;">Реквизиты</a></p>
+    </div>
+    <div>
+      <h4 style="color: white;">Контакты</h4>
+      <p>📞 +7 (903) 786-82-92</p>
+      <p>✉️ bnl83@yandex.ru</p>
+      <p>📍 Химки, ул. Юннатов, 21</p>
+    </div>
+  </div>
+  <div class="footer-copy">
+    © 2025 ООО «НФК Групп» — Все права защищены. Информация на сайте не является публичной офертой.
+  </div>
+</footer>
+</body>
+</html>
